@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquabloom Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8f5;
+            color: #2d4739;
+            text-align: center;
+        }
+        header {
+            background-color: #cce3de;
+            padding: 20px;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .logo {
+            width: 50px;
+            height: auto;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li button {
+            background-color: #8fb397;
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        nav ul li button:hover {
+            background-color: #6f8b76;
+        }
+        section {
+            margin: 20px;
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        .section-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 20px 0;
+        }
+        footer {
+            background-color: #cce3de;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aquabloom</h1>
+        <img src="logo.PNG" alt="logo aquabloom" class="logo">
+        <p>Conectando la naturaleza con la fertilidad del suelo</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><button onclick="mostrarTexto('sobre-nosotros')">Sobre Nosotros</button></li>
+            <li><button onclick="mostrarTexto('algas')">Algas</button></li>
+            <li><button onclick="mostrarTexto('conchas')">Conchas</button></li>
+            <li><button onclick="mostrarTexto('agricultura-casa')">Agricultura en Casa</button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- 🔹 Introducción de AquaBloom visible al inicio -->
+        <section id="inicio" class="active">
+            <p><strong>AquaBloom</strong> es una empresa dedicada a la producción de fertilizantes orgánicos a base de composta de <em>Macrocystis pyrifera</em> (alga marina) y conchas de molusco. 
+            Su enfoque principal es ofrecer un producto sustentable y ecológico, promoviendo la fertilidad del suelo y el crecimiento saludable de los cultivos sin afectar el medio ambiente. 
+            La empresa busca combinar innovación y sostenibilidad para brindar soluciones agrícolas eficientes y responsables.</p>
+        </section>
+
+        <section id="sobre-nosotros">
+            <p>AquaBloom es una empresa dedicada a la producción de fertilizantes orgánicos a base de Macrocystis pyrifera (alga marina) y conchas de molusco. Su enfoque principal es ofrecer un producto sustentable y ecológico, promoviendo la fertilidad del suelo y el crecimiento saludable de los cultivos sin afectar el medio ambiente. La empresa busca combinar innovación y sostenibilidad para brindar soluciones agrícolas eficientes y responsables.</p>
+        </section>
+
+        <section id="algas">
+            <p>Macrocystis es un género de algas pardas gigantes, principalmente Macrocystis pyrifera, conocida como "sargazo gigante" o "kelp gigante". Su uso en la agricultura es cada vez más popular debido a sus múltiples beneficios.</p>
+            <img src="algas.JPG" alt="Imagen de Algas" class="section-image">
+        </section>
+
+        <section id="conchas">
+            <p>Las conchas de molusco (como ostras, mejillones y caracoles) son un subproducto marino con diversos usos beneficiosos en la agricultura. Están compuestas principalmente de carbonato de calcio (CaCO₃), lo que les otorga propiedades valiosas para la mejora del suelo y la nutrición de las plantas.</p>
+            <img src="conchas.JPG" alt="Imagen de Conchas" class="section-image">
+        </section>
+
+        <section id="agricultura-casa">
+            <p><strong>Importancia de la Agricultura en Casa</strong><br>
+            Cultivar alimentos en casa no solo garantiza productos frescos y saludables, sino que también promueve la autosuficiencia y el cuidado del medio ambiente. 
+            Usar fertilizantes orgánicos, como los de <em>AquaBloom</em>, ayuda a enriquecer el suelo sin productos químicos dañinos, fomentando un ecosistema sostenible y saludable.</p>
+            <img src="infografia.PNG" alt="Imagen de Agricultura en Casa" class="section-image">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aquabloom - Todos los derechos reservados</p>
+        <p>Correo: <a href="mailto:inf.aquabloom@gmail.com">inf.aquabloom@gmail.com</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/aquabloom.mx" target="_blank">Aquabloom.mx</a></p>
+        <p>Facebook: <a href="https://www.facebook.com/aquabloom" target="_blank">Aquabloom</a></p>
+    </footer>
+
+    <script>
+        function mostrarTexto(id) {
+            // Oculta todas las secciones
+            var secciones = document.querySelectorAll("main section");
+            secciones.forEach(function(sec) {
+                sec.classList.remove("active");
+            });
+            // Muestra solo la sección seleccionada
+            document.getElementById(id).classList.add("active");
+        }
+    </script>
+</body>
+</html>

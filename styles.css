@@ -1,0 +1,144 @@
+/* Paleta de colores suaves */
+:root {
+    --verde-claro: #d4e9d7;
+    --verde-medio: #a8c6a2;
+    --verde-oscuro: #6b8f71;
+    --texto: #3a5044;
+    --blanco: #f9f9f9;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--verde-claro);
+    color: var(--texto);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--verde-medio);
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--verde-oscuro);
+}
+
+nav {
+    background-color: var(--verde-oscuro);
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.post {
+    background: var(--blanco);
+    margin: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.post img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.post h2 {
+    color: var(--verde-oscuro);
+}
+
+.post a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: var(--verde-medio);
+    color: var(--texto);
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.post a:hover {
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+}
+
+footer {
+    background-color: var(--verde-oscuro);
+    text-align: center;
+    padding: 10px;
+    color: var(--blanco);
+}
+#contacto {
+    background-color: var(--blanco);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+#contacto h2 {
+    color: var(--verde-oscuro);
+}
+
+#contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#contact-form input, 
+#contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid var(--verde-medio);
+    border-radius: 4px;
+}
+
+#contact-form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--verde-medio);
+    color: var(--texto);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+}
